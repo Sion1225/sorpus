@@ -10,7 +10,7 @@ class SpecialWordMasker:
     :param replacement_char: Character to replace the target word with
 
     >>> masker = MaskSpecialWords(['New York', 'El Nino'], ' ', '•')
-    >>> masker.mask_special_char_in_words('New York is affected by El Nino.')
+    >>> masker.mask_words('New York is affected by El Nino.')
     'New•York is affected by El•Nino.'
     """
     def __init__(self, special_words: List[str], target_word: str, replacement_char: str):
