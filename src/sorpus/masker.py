@@ -1,5 +1,6 @@
 from typing import List
 
+
 class SpecialWordMasker:
     """
     This class masks special words in a text.

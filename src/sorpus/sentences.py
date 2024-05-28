@@ -1,5 +1,6 @@
 from typing import List
 
+
 def find_with_word(word: str, sentences: List[str]) -> List[str]:
     """
     This function checks if a word is in a list of sentences.
@@ -15,6 +16,7 @@ def find_with_word(word: str, sentences: List[str]) -> List[str]:
     ['Proverbs are short sentences drawn from long experience.']
     """
     return [sentence for sentence in sentences if word in sentence]
+
 
 def replace_word(word: str, new_word: str, sentences: List[str]) -> List[str]:
     """
