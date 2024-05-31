@@ -27,6 +27,14 @@ def test_replace_special_words_between_difference_chars():
     )
 
 
+def test_replace_special_words_between_difference_chars_without_spaces():
+    replacer = SpecialWordReplacer(["pineapple"], "apple", "cone")
+    assert (
+        replacer.mask_words("He said the word brown-pineapples while pointing at a nut.")
+        == "He said the word brown-pinecones while pointing at a nut."
+    )
+
+
 def test_replace_special_words_repr():
     replacer = SpecialWordReplacer(["New York", "El Nino"], " ", "•")
     assert (
