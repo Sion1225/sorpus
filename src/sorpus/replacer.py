@@ -16,9 +16,15 @@ class SpecialWordReplacer:
     He said the word "green apple" while pointing at an apple.
     """
     def __init__(self, special_words: List[str], target_word: str, replacement_char: str):
+        import re
+
         self.special_words = special_words
         self.target_word = target_word
         self.replacement_char = replacement_char
+        self.compiled_patterns = {
+            re.compile(re.escape(word)): word.replace(target_word, replacement_char)
+            for word in special_words
+        }
 
     def mask_words(self, text: str) -> str:
         """
@@ -28,9 +34,8 @@ class SpecialWordReplacer:
 
         :return: Text with special words masked
         """
-        for word in self.special_words:
-            masked_word = word.replace(self.target_word, self.replacement_char)
-            text = text.replace(word, masked_word)
+        for pattern, masked_word in self.compiled_patterns.items():
+            text = pattern.sub(masked_word, text)
         return text
     
     def __repr__(self):
