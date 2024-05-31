@@ -17,9 +17,6 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
-[tool.setuptools]
-packages = ["find:"]
-
 [tool.setuptools.packages.find]
 where = ["src"]
 
