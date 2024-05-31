@@ -1,12 +1,12 @@
 [project]
 name = "sorpus"
-version = "0.0.1"
+version = "0.0.1-pre-alpha"
 authors = [
   { name="Siwon Seo", email="visiopo44@gmail.com" },
 ]
 description = "Sentence (Operations) Processing Utilities"
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: Apache Software License",

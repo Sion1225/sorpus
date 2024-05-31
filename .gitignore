@@ -3,3 +3,7 @@
 /.pytest_cache
 
 /scr/sorter.egg-info
+
+/scr/sorpus/__pycache__
+
+/tests/__pycache__
