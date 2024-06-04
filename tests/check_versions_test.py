@@ -1,3 +1,4 @@
+import pytest
 import toml
 import re
 
@@ -21,5 +22,6 @@ def get_version_from_readme():
 
 
 # version check
+@pytest.mark.version_test
 def test_version():
     assert __version__ == get_version_from_pyproject() == get_version_from_readme()
