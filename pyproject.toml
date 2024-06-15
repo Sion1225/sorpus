@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sorpus"
-version = "0.0.1.post2"
+version = "0.0.1.post3"
 authors = [
   { name="Siwon Seo", email="visiopo44@gmail.com" },
 ]

@@ -1,5 +1,6 @@
 from typing import List, Tuple
 
+
 class SpecialWordReplacer:
     """
     This class replace or mask special words between in particular words in a text.
@@ -15,7 +16,10 @@ class SpecialWordReplacer:
     >>> print(replacer.mask_words('He said the word "apple" while pointing at an apple.'))
     He said the word "green apple" while pointing at an apple.
     """
-    def __init__(self, special_words: List[str], target_word: str, replacement_char: str):
+
+    def __init__(
+        self, special_words: List[str], target_word: str, replacement_char: str
+    ):
         import re
 
         self.special_words = special_words
@@ -37,6 +41,18 @@ class SpecialWordReplacer:
         for pattern, masked_word in self.compiled_patterns.items():
             text = pattern.sub(masked_word, text)
         return text
-    
+
     def __repr__(self):
-        return f'<SpecialWordReplacer(special_words={self.special_words}, target_word=\'{self.target_word}\', replacement_char=\'{self.replacement_char}\')>'
+        return f"<SpecialWordReplacer(special_words={self.special_words}, target_word='{self.target_word}', replacement_char='{self.replacement_char}')>"
+
+
+class SepcialWordMasker(SpecialWordReplacer):
+    def __init__(self, special_words, target_word, replacement_char):
+        super().__init__(special_words, target_word, replacement_char)
+        Warning("This class is deprecated. Please use SpecialWordReplacer instead.")
+
+    def mask_words(self, text):
+        return super().mask_words(text)
+
+    def __repr__(self):
+        return f"<SepcialWordMasker(special_words={self.special_words}, target_word='{self.target_word}', replacement_char='{self.replacement_char}')>"
