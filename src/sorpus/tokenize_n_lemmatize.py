@@ -14,11 +14,13 @@ try:
 
     find("tokenizers/punkt")
     find("taggers/averaged_perceptron_tagger")
+    find("corpora/wordnet")
 except LookupError:
     import nltk
 
     nltk.download("punkt")
     nltk.download("averaged_perceptron_tagger")
+    nltk.download("wordnet")
 
 
 class TokenizerNLemmatizer:
