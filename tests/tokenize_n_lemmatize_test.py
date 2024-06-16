@@ -1,5 +1,6 @@
 import pytest
 import os
+import nltk
 
 from src.sorpus.tokenize_n_lemmatize import TokenizerNLemmatizer
 
