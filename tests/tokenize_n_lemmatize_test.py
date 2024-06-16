@@ -15,7 +15,7 @@ def test_text_lemmatizer():
 
     assert tomatizer.text_lemmatizer(
         "In New•York, I saw police•officers and firefighters.",
-        pace_token="•",
+        space_token="•",
         return_pos=False,
     ) == [
         "in",
@@ -30,7 +30,7 @@ def test_text_lemmatizer():
     ]
     assert tomatizer.text_lemmatizer(
         "In New•York, I saw police•officers and firefighters.",
-        pace_token="•",
+        space_token="•",
         return_pos=True,
     ) == [
         ("in", "IN"),
