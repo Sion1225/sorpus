@@ -1,7 +1,7 @@
 import pytest
 import os
 
-from src.sorpus import TokenizerNLemmatizer
+from src.sorpus.tokenize_n_lemmatize import TokenizerNLemmatizer
 
 
 def test_text_lemmatizer():

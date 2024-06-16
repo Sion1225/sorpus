@@ -10,9 +10,9 @@ except ImportError:
     )
 
 
-class TokenizeNLemmatize:
+class TokenizerNLemmatizer:
     """
-    Tokenize And Lemmatize
+    Tokenizer And Lemmatizer
 
     Tokenize and Lemmatize the text using Stanford NER and NLTK
 
