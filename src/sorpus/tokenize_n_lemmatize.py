@@ -9,6 +9,17 @@ except ImportError:
         "nltk is not installed. Please install it using 'pip install nltk'"
     )
 
+try:
+    from nltk.data import find
+
+    find("tokenizers/punkt")
+    find("taggers/averaged_perceptron_tagger")
+except LookupError:
+    import nltk
+
+    nltk.download("punkt")
+    nltk.download("averaged_perceptron_tagger")
+
 
 class TokenizerNLemmatizer:
     """

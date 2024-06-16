@@ -7,6 +7,8 @@ from src.sorpus.tokenize_n_lemmatize import TokenizerNLemmatizer
 
 def test_text_lemmatizer():
     nltk.download("punkt")
+    nltk.download("averaged_perceptron_tagger")
+
     source_directory = os.path.dirname(os.path.abspath(__file__))
     stanford_path = os.path.join(source_directory, "stanford")
 
